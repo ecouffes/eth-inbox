@@ -11,7 +11,7 @@ const provider = new HDWalletProvider(
 const web3 = new Web3(provider);
 
 
-const deploy = async () => {
+(async () => {
   const accounts = await web3.eth.getAccounts();
 
   console.log('Attempting to deploy from account', accounts[0]);
@@ -27,8 +27,7 @@ const deploy = async () => {
     });
 
   console.log('Contract deployed to', inbox.options.address);
-};
+})();
 
-deploy();
 
 // run with "node deploy"
