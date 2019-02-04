@@ -2,7 +2,7 @@ pragma solidity ^0.4.22;
 
 contract Inbox {
 
-    // instance variable (is storage variable)
+    // state variable
     string public message;
     
     constructor(string _message) public {
